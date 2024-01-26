@@ -1,0 +1,56 @@
+{
+  "name": "@rsksmart/rsk-contract-parser",
+  "version": "1.0.4",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "npx eslint src/**/* --quiet",
+    "test": "npx mocha",
+    "test:local": "npx mocha test/compiler.spec.js test/events.spec.js test/nativeContracts.spec.js test/bridgeAbi.spec.js",
+    "build": "npx babel src -d dist --copy-files",
+    "abi": "npx babel-node --presets  @babel/preset-env src/lib/compileJsonAbis.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsksmart/rsk-contract-parser.git"
+  },
+  "keywords": [
+    "rsk",
+    "blockchain",
+    "events",
+    "token"
+  ],
+  "author": "emi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsksmart/rsk-contract-parser/issues"
+  },
+  "homepage": "https://github.com/rsksmart/rsk-contract-parser#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.6",
+    "openzeppelin-solidity": "^2.4.0"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@rsksmart/nod3": "^0.5.0",
+    "@rsksmart/rsk-utils": "^1.1.0",
+    "bs58": "^4.0.1",
+    "secp256k1": "^3.7.1"
+  }
+}

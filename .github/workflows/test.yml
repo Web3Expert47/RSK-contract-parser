@@ -1,0 +1,15 @@
+name: ci
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - run: npm ci
+    - run: npm run test:local
+    - run: mv dist/ dist2/
+    - run: npm run build
+    - run: diff -arq dist/ dist2/

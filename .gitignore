@@ -1,0 +1,7 @@
+node_modules
+.vscode
+src/tmp
+tmp
+coverage
+.nyc_output
+dist2
